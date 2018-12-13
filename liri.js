@@ -10,16 +10,28 @@ var cmd = process.argv[2];
 
 if (cmd === 'concert-this') {
     var artist = "";
-    for (var i = 2; i < process.argv.length; i++) {
-        artist += process.argv[i];
+    for (var i = 3; i < process.argv.length; i++) {
+        if(i===3){
+            artist = process.argv[i];
+        }
+        else{
+            artist+= " ";
+            artist += process.argv[i];
+        }
     }
 
     concertCall(artist);
 }
 else if (cmd === 'spotify-this-song') {
-    var song = "";
-    for (var i = 2; i < process.argv.length; i++) {
-        song += process.argv[i];
+    var song;
+    for (var i = 3; i < process.argv.length; i++) {
+        if(i===3){
+            song = process.argv[i];
+        }
+        else{
+            song += " ";
+            song += process.argv[i];
+        }
     }
 
     spotifyCall(song);
@@ -28,8 +40,14 @@ else if (cmd === 'spotify-this-song') {
 else if (cmd === 'movie-this') {
     var movie = "";
 
-    for (var i = 2; i < process.argv.length; i++) {
-        movie += process.argv[i];
+    for (var i = 3; i < process.argv.length; i++) {
+        if(i===3){
+            movie = process.argv[i];
+        }
+        else{
+            movie += " ";
+            movie += process.argv[i];
+        }
     }
 
     movieCall(movie);
@@ -75,6 +93,8 @@ function concertCall(artist) {
     }
     else {
         var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
+        //console.log(artist);
+        //console.log(queryURL);
 
         request(queryURL, { json: true }, (err, res, body) => {
             if (err) {
