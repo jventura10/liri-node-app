@@ -193,7 +193,7 @@ function spotifyCall(song) {
 }
 
 function movieCall(movie) {
-    console.log(movie);
+    //console.log(movie);
     var movieURL;
 
     //Default Case Because no Movie Was Passed in
