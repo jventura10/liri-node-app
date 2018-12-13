@@ -75,6 +75,8 @@ Examples:
 
 ![Alt text](/spotify-song.PNG?raw=true "Spotify Command")
 
+![Alt text](/movie-default.PNG?raw=true "Movie Command Default Movie")
+
 ![Alt text](/movie-this.PNG?raw=true "Movie Command")
 
 ![Alt text](/random.PNG?raw=true "File Command")

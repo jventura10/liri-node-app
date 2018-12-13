@@ -193,10 +193,11 @@ function spotifyCall(song) {
 }
 
 function movieCall(movie) {
+    console.log(movie);
     var movieURL;
 
     //Default Case Because no Movie Was Passed in
-    if (movie === undefined) {
+    if (movie === "") {
         movie = "Mr.Nobody";
         movieURL = "http://www.omdbapi.com/?apikey=trilogy&t=" + movie;
 
